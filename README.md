@@ -50,6 +50,27 @@ The following analyses were performed:
 * Correlation analysis
 * Family Size feature engineering
 
+## Correlation Heatmap
+
+To better understand the relationships between the numerical features, a Pearson correlation heatmap was generated during the Exploratory Data Analysis (EDA) phase.
+
+The heatmap highlights:
+
+- Positive and negative correlations between numerical features.
+- Features that are strongly associated with the target variable (`Survived`).
+- Potential multicollinearity before model training.
+
+### Correlation Heatmap
+
+![Correlation Heatmap](outputs/plots/correlation_heatmap.png)
+
+### Key Observations
+
+- `Fare` shows a positive correlation with passenger survival.
+- `Pclass` is negatively correlated with survival, indicating that passengers in higher classes were more likely to survive.
+- `Age` has a weak negative correlation with survival.
+- No severe multicollinearity was observed among the numerical features.
+
 ---
 
 # Data Preprocessing
