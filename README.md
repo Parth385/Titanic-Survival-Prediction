@@ -160,6 +160,63 @@ notebooks/titanic_survival.ipynb
 
 ---
 
+
+# Example Predictions
+
+After training, the preprocessing pipeline and Logistic Regression model were saved using **Joblib**. The saved artifacts can be loaded later to make predictions on new passenger information without retraining the model.
+
+The following examples demonstrate predictions on two well-known fictional characters from the Titanic movie.
+
+## Example 1 – Jack Dawson
+
+**Passenger Information**
+
+| Feature | Value |
+|---------|-------|
+| Passenger Class | 3 |
+| Sex | Male |
+| Age | 20 |
+| Fare | 7.25 |
+| Embarked | Southampton (S) |
+
+**Prediction**
+
+```text
+Prediction : Did Not Survive
+
+Probability of Survival     : 17.59%
+Probability of Not Survival : 82.41%
+```
+
+---
+
+## Example 2 – Rose DeWitt Bukater
+
+**Passenger Information**
+
+| Feature | Value |
+|---------|-------|
+| Passenger Class | 1 |
+| Sex | Female |
+| Age | 17 |
+| Fare | 512.00 |
+| Embarked | Southampton (S) |
+
+**Prediction**
+
+```text
+Prediction : Survived
+
+Probability of Survival     : 99.74%
+Probability of Not Survival : 0.26%
+```
+
+---
+
+These predictions demonstrate how the trained machine learning pipeline can be reused to classify completely new passenger records while automatically applying the same preprocessing steps used during training.
+
+---
+
 # Future Improvements
 
 * Compare additional machine learning models such as Random Forest and XGBoost.
